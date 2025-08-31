@@ -1,0 +1,95 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Configure",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "-S", ".",
+        "-B", "Out/CMake_Files",
+        "-G", "Unix Makefiles"
+      ],
+      "problemMatcher": [],
+      "detail": "Configure CMake project"
+    },
+    {
+      "label": "Build: ALL",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build", "Out/CMake_Files",
+        "--target", "ALL.elf",
+        "--", "-j"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Build ALL.elf"
+    },
+    {
+      "label": "Build: APP",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build", "Out/CMake_Files",
+        "--target", "APP.elf",
+        "--", "-j"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Build APP.elf"
+    },
+    {
+      "label": "Build: BootLoader",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build", "Out/CMake_Files",
+        "--target", "BootLoader.elf",
+        "--", "-j"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Build BootLoader.elf"
+    },
+    {
+      "label": "Build: BootLoaderUpdater",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build", "Out/CMake_Files",
+        "--target", "BootLoaderUpdater.elf",
+        "--", "-j"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Build BootLoaderUpdater.elf"
+    },
+    {
+      "label": "Clean Outputs",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build", "Out/CMake_Files",
+        "--target", "clean_outputs"
+      ],
+      "problemMatcher": [],
+      "detail": "Removes Out/Bin, Out/Map, Out/Lst, Out/Debug"
+    },
+    {
+      "label": "Clean All",
+      "type": "shell",
+      "command": "rm",
+      "args": [
+        "-rf",
+        "Out/Bin/*",
+        "Out/Map/*",
+        "Out/Lst/*",
+        "Out/Debug/*",
+        "Out/CMake_Files/*"
+      ],
+      "problemMatcher": [],
+      "detail": "Hard clean of all generated files"
+    }
+  ]
+}
