@@ -3,7 +3,7 @@
 file(GLOB APP_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/Main/Src/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Board_Cfg/Src/*.c
-    ${PROJECT_SOURCE_DIR}/MCU_Core/Startup/startup_app.s
+    ${PROJECT_SOURCE_DIR}/MCU_Core/Startup/startup_stm32f303cbtx.s
 )
 
 add_library(APP_objs OBJECT ${APP_SRCS})

@@ -35,7 +35,7 @@ void BootLoader_JumpTo_App(void);
 * @param  None
 * @retval None
 */
-int btl_main(void)
+int main(void)
 {
     BootLoader_JumpTo_App();
     /* Infinite loop */

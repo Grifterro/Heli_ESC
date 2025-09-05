@@ -42,7 +42,7 @@ add_custom_target(create_output_dirs
 )
 
 # Add subprojects
-#add_subdirectory(APP)
+add_subdirectory(APP)
 add_subdirectory(BootLoader)
 add_subdirectory(MCU_Core)
 
