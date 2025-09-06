@@ -1,0 +1,5 @@
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks_sixstep.c:344:13:SIX_STEP_Clear	1
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks_sixstep.c:76:13:SIX_STEP_Init	2
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks_sixstep.c:118:6:TSK_MF_StopProcessing	1
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks_sixstep.c:133:13:TSK_MediumFrequencyTaskM1	21
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks_sixstep.c:377:13:TSK_SpeedTIM_task	6

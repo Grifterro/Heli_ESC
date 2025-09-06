@@ -1,0 +1,10 @@
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:84:13:MCboot	16	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:244:13:TSK_SetChargeBootCapDelayM1	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:255:13:TSK_ChargeBootCapDelayHasElapsedM1	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:271:13:TSK_SetStopPermanencyTimeM1	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:282:13:TSK_StopPermanencyTimeHasElapsedM1	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:320:13:TSK_SafetyTask_PWMOFF	24	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:297:13:TSK_SafetyTask	8	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:155:13:MC_RunMotorControlTasks	16	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:378:13:TSK_HardwareFaultTask	8	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/mc_tasks.c:394:13:mc_lock_pins	56	static

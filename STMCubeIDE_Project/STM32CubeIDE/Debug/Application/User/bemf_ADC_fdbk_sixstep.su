@@ -1,0 +1,17 @@
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:63:13:BADC_Init	16	static,ignoring_inline_asm
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:152:13:BADC_Clear	8	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:271:13:BADC_Stop	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:293:13:BADC_SetSamplingPoint	8	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:357:13:BADC_IsZcDetected	16	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:524:13:BADC_CalcAvrgMecSpeedUnit	16	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:593:13:BADC_SetDirection	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:616:6:BADC_SelectAdcChannel	40	static,ignoring_inline_asm
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:201:13:BADC_Start	8	static,ignoring_inline_asm
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:631:6:BADC_StepChangeEvent	16	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:684:6:BADC_CalcRevUpDemagTime	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:730:6:BADC_CalcRunDemagTime	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:777:6:BADC_SetLoopClosed	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:798:6:BADC_SetSpeedTimer	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:833:6:BADC_CheckDetectionErrors	0	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:872:8:BADC_SetBemfSensorlessParam	4	static
+C:/Users/fabia/.st_workbench/projects/STEVAL-ESC001V1/Src/bemf_ADC_fdbk_sixstep.c:907:6:BADC_GetBemfSensorlessParam	4	static
