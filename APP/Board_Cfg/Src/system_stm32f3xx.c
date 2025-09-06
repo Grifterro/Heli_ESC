@@ -47,6 +47,14 @@ const uint8_t APBPrescTable[8]  =  {0,0,0,0, 1,2,3,4};
 */
 void SystemInit(void)
 {
+#ifndef VECT_TAB_BASE
+  #define VECT_TAB_BASE   0x08000000U
+#endif
+
+#ifndef VECT_TAB_OFFSET
+  #define VECT_TAB_OFFSET 0x00000000U  // nadpisz z CMake
+#endif
+
 #ifdef __FPU_PRESENT
   #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
     SCB->CPACR |= ((3UL << 20) | (3UL << 22));
