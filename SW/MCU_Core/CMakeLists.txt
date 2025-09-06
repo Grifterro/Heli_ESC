@@ -1,4 +1,11 @@
-# MCU_Core/CMakeLists.txt
+#******************************************************************************
+#* @file           : MCU_Core/CMakeLists.txt
+#*
+#******************************************************************************
+#* @attention This software has been developed by Fabian Donchór since 2025.
+#* email: fabian.donchor@gmail.com
+#* All rights reserved.
+#******************************************************************************
 
 set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Sys/Src)
 
@@ -16,5 +23,5 @@ target_include_directories(MCU_CORE_RUNTIME PRIVATE
 )
 
 target_compile_definitions(MCU_CORE_RUNTIME PRIVATE
-    STM32F303xB
+    STM32F303xC
 )

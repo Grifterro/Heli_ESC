@@ -1,10 +1,11 @@
-###############################################################################
-# @attention
-# This software has been developed by Fabian Donchór since 2025.
-# email: fabian.donchor@gmail.com
-# All rights reserved.
-###############################################################################
-# main CMakeLists.txt
+#******************************************************************************
+#* @file           : main CMakeLists.txt
+#*
+#******************************************************************************
+#* @attention This software has been developed by Fabian Donchór since 2025.
+#* email: fabian.donchor@gmail.com
+#* All rights reserved.
+#******************************************************************************
 
 cmake_minimum_required(VERSION 3.2)
 project(Heli_ESC C ASM)

@@ -1,4 +1,11 @@
-# BootLoader/CMakeLists.txt
+#******************************************************************************
+#* @file           : BootLoader/CMakeLists.txt
+#*
+#******************************************************************************
+#* @attention This software has been developed by Fabian Donchór since 2025.
+#* email: fabian.donchor@gmail.com
+#* All rights reserved.
+#******************************************************************************
 
 file(GLOB BOOTLOADER_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/Main/Src/*.c
@@ -19,7 +26,7 @@ target_include_directories(BOOTLOADER_objs BEFORE PRIVATE
 
 target_compile_definitions(BOOTLOADER_objs PRIVATE
     BOOTLOADER
-    STM32F303xB
+    STM32F303xC
 )
 
 
@@ -38,7 +45,7 @@ target_include_directories(HAL_BOOTLOADER PRIVATE
 )
 
 target_compile_definitions(HAL_BOOTLOADER PRIVATE
-    STM32F303xB
+    STM32F303xC
     USE_HAL_DRIVER
     USER_VECT_TAB_ADDRESS
 )

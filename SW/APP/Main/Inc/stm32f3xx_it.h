@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file           : stm32f3xx_it.h
-  * @brief          : 
+  * @file           : stm32f3xx_it.c
+  * @brief          :
   *
   ******************************************************************************
-  * @attention This software is developed by Fabian Donchór
-  * Copyright (c) 2025 Flytronic.
+  * @attention This software has been developed by Fabian Donchór since 2025.
+  * email: fabian.donchor@gmail.com
   * All rights reserved.
   ******************************************************************************
 */

@@ -3,10 +3,9 @@ set -e
 
 BOOTLOADER="Out/Bin/BootLoader.elf"
 APP="Out/Bin/App.elf"
-BOOTLOADER_UP="Out/Bin/BootLoaderUpdater.elf"
 
-# Sprawdzenie istnienia plików
-for file in "$BOOTLOADER" "$APP" "$BOOTLOADER_UP"; do
+# Checking for file existence
+for file in "$BOOTLOADER" "$APP"; do
     if [ ! -f "$file" ]; then
         echo "ERROR: File not found: $file"
         exit 1
@@ -27,11 +26,8 @@ openocd \
         echo \"Flashing BOOTLOADER...\";
         program $BOOTLOADER verify;
 
-        echo \"Flashing SECURE APP...\";
+        echo \"Flashing APP...\";
         program $APP verify;
-
-        echo \"Flashing NONSECURE APP...\";
-        program $BOOTLOADER_UP verify;
 
         reset;
         exit;

@@ -3,7 +3,7 @@
 # Ustawienia
 DEVICE="STM32F303CB"
 INTERFACE="SWD"
-SPEED="4000"
+SPEED="8000"
 
 # Ścieżka do JLinkExe (upewnij się, że jest w PATH, lub podaj pełną ścieżkę)
 JLINK=JLinkExe

@@ -26,7 +26,6 @@ cmake -S . -B ${BUILD_DIR} \
 # Krok 2: Budowanie
 echo "[2/3] Building project..."
 cmake --build ${BUILD_DIR} -- -j$(nproc)
-#cmake --build ${BUILD_DIR} -- -j$(nproc)
 
 # Krok 3: Wyniki
 echo "[3/3] Done. ELF files:"
