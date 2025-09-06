@@ -1,25 +1,25 @@
 #!/bin/bash
 
-# Ustawienia
+# Settings
 DEVICE="STM32F303CB"
 INTERFACE="SWD"
 SPEED="8000"
 
-# Ścieżka do JLinkExe (upewnij się, że jest w PATH, lub podaj pełną ścieżkę)
+# Path to JLinkExe
 JLINK=JLinkExe
 
-# Nazwa tymczasowego pliku ze skryptem J-Link
+# Name of the temporary J-Link script file
 SCRIPT_FILE="erase.jlink"
 
-# Tworzenie skryptu J-Link
+# Creating a J-Link script
 cat <<EOF > $SCRIPT_FILE
 r
 erase
 exit
 EOF
 
-# Uruchomienie J-LinkExe z parametrami
+# Run J-LinkExe with parameters
 $JLINK -device $DEVICE -if $INTERFACE -speed $SPEED -autoconnect 1 -CommanderScript $SCRIPT_FILE
 
-# Usunięcie tymczasowego pliku
+# Delete temporary file
 rm $SCRIPT_FILE
