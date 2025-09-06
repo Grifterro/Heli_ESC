@@ -16,5 +16,5 @@ target_include_directories(MCU_CORE_RUNTIME PRIVATE
 )
 
 target_compile_definitions(MCU_CORE_RUNTIME PRIVATE
-    STM32F303xC
+    STM32F303xB
 )

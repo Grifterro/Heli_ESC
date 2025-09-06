@@ -24,7 +24,7 @@
 /*** Private typedef -----------------------------------------------------------*/
 
 /*** Private variables ---------------------------------------------------------*/
-extern uint32_t APP_ADDRESS;
+extern const uint32_t APP_ADDRESS;
 
 /*** Private function prototypes -----------------------------------------------*/
 void BootLoader_JumpTo_App(void);

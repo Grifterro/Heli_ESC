@@ -53,7 +53,7 @@ add_executable(APP.elf
 )
 
 target_link_options(APP.elf PRIVATE
-    -T${CMAKE_SOURCE_DIR}/MCU_Core/Linker/FLASH_APP.ld
+    -T${CMAKE_SOURCE_DIR}/MCU_Core/Linker/STM32F303CBTX_FLASH_APP.ld
     -Wl,-Map=${MAP_DIR}/APP.map
     -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -specs=nosys.specs
 )
@@ -78,7 +78,7 @@ add_executable(BootLoader.elf
 )
 
 target_link_options(BootLoader.elf PRIVATE
-    -T${CMAKE_SOURCE_DIR}/MCU_Core/Linker/FLASH_BOOTLOADER.ld
+    -T${CMAKE_SOURCE_DIR}/MCU_Core/Linker/STM32F303CBTX_FLASH_BTL.ld
     -Wl,-Map=${MAP_DIR}/BootLoader.map
     -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -specs=nosys.specs
 )

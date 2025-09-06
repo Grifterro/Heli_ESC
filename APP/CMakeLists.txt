@@ -4,6 +4,7 @@ file(GLOB APP_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/Main/Src/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Board_Cfg/Src/*.c
     ${PROJECT_SOURCE_DIR}/MCU_Core/Startup/startup_stm32f303cbtx.s
+    ${PROJECT_SOURCE_DIR}/MCU_Core/Sys/Src/*.c
 )
 
 add_library(APP_objs OBJECT ${APP_SRCS})
@@ -18,7 +19,7 @@ target_include_directories(APP_objs BEFORE PRIVATE
 
 target_compile_definitions(APP_objs PRIVATE
     APP
-    STM32F303xC
+    STM32F303xB
 )
 
 
@@ -37,5 +38,7 @@ target_include_directories(HAL_APP PRIVATE
 )
 
 target_compile_definitions(HAL_APP PRIVATE
-    STM32F303xC
+    STM32F303xB
+    USE_HAL_DRIVER
+    USER_VECT_TAB_ADDRESS
 )

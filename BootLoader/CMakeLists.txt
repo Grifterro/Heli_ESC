@@ -4,6 +4,7 @@ file(GLOB BOOTLOADER_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/Main/Src/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Board_Cfg/Src/*.c
     ${PROJECT_SOURCE_DIR}/MCU_Core/Startup/startup_stm32f303cbtx.s
+    ${PROJECT_SOURCE_DIR}/MCU_Core/Sys/Src/*.c
 )
 
 add_library(BOOTLOADER_objs OBJECT ${BOOTLOADER_SRCS})
@@ -18,7 +19,7 @@ target_include_directories(BOOTLOADER_objs BEFORE PRIVATE
 
 target_compile_definitions(BOOTLOADER_objs PRIVATE
     BOOTLOADER
-    STM32F303xC
+    STM32F303xB
 )
 
 
@@ -37,5 +38,7 @@ target_include_directories(HAL_BOOTLOADER PRIVATE
 )
 
 target_compile_definitions(HAL_BOOTLOADER PRIVATE
-    STM32F303xC
+    STM32F303xB
+    USE_HAL_DRIVER
+    USER_VECT_TAB_ADDRESS
 )
