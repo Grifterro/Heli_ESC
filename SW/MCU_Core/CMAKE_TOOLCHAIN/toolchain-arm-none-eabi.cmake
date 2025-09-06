@@ -1,4 +1,11 @@
-# === TOOLCHAIN FILE FOR ARM-NONE-EABI (STM32F3xx, Cortex-M33) ===
+#******************************************************************************
+#* @file           : toolchain-arm-none-eabi.cmake
+#*                   TOOLCHAIN FILE FOR ARM-NONE-EABI (STM32F3xx, Cortex-M4)
+#******************************************************************************
+#* @attention This software has been developed by Fabian Donchór since 2025.
+#* email: fabian.donchor@gmail.com
+#* All rights reserved.
+#******************************************************************************
 
 # System and Architecture
 set(CMAKE_SYSTEM_NAME Generic)
