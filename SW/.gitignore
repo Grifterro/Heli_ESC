@@ -1,0 +1,6 @@
+# Output folders
+/Out
+
+# OS files
+.DS_Store
+Thumbs.db

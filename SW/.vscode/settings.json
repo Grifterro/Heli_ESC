@@ -1,0 +1,19 @@
+{
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/Out/CMake_Files/compile_commands.json",
+  "cortex-debug.gdbPath": "/usr/bin/gdb-multiarch",
+  "cortex-debug.armToolchainPath": "/usr/bin/",
+  "files.associations": {
+    "cmsis_gcc.h": "c",
+    "stm32f3xx_hal.h": "c",
+    "stm32f3xx.h": "c",
+    "portasm.h": "c",
+    "stm32f3xx_hal_cortex.h": "c",
+    "stm32f3xx_hal_dma_ex.h": "c",
+    "task.h": "c",
+    "stm32f3xx_hal_conf.h": "c",
+    "modems_cfg.h": "c",
+    "modems_lla.h": "c"
+  },
+  "cortex-debug.variableUseNaturalFormat": true
+}
+
