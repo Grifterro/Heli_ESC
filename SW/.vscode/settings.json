@@ -14,6 +14,10 @@
     "modems_cfg.h": "c",
     "modems_lla.h": "c"
   },
-  "cortex-debug.variableUseNaturalFormat": true
+  "cortex-debug.variableUseNaturalFormat": true,
+  "[c]": {"editor.defaultFormatter": "xaver.clang-format"},
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "clang-format.style": "file"
 }
 
