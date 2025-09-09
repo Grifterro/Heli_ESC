@@ -23,11 +23,14 @@
 /* Private define ------------------------------------------------------------*/
 
 /* Private variables ---------------------------------------------------------*/
+static TIM_HandleTypeDef htim1;
 
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
 static void GPIO_Init(void);
-static void ADC3_Init(void);
+static void OPAMP4_Init(void);
+static void ADC4_Init(void);
+static void TIM1_Trig_Init(uint16_t sample_shift_ticks);
 static void Error_Handler(void);
 
 /* Private function ----------------------------------------------------------*/
@@ -104,65 +107,81 @@ static void GPIO_Init(void)
    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
    GPIO_InitStruct.Pull = GPIO_NOPULL;
    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+   HAL_GPIO_WritePin(ESC_LED_STATUS_GPIO_PORT, ESC_LED_STATUS_GPIO_PIN, GPIO_PIN_RESET);
+   HAL_GPIO_Init(ESC_LED_STATUS_GPIO_PORT, &GPIO_InitStruct);
 
    /* Configure pin for VBUS */
    GPIO_InitStruct.Pin = ESC_VBUS_GPIO_PIN;
    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
    GPIO_InitStruct.Pull = GPIO_NOPULL;
    HAL_GPIO_Init(ESC_VBUS_GPIO_PORT, &GPIO_InitStruct);
+}
 
-   HAL_GPIO_WritePin(ESC_LED_STATUS_GPIO_PORT, ESC_LED_STATUS_GPIO_PIN, GPIO_PIN_RESET);
-   HAL_GPIO_Init(ESC_LED_STATUS_GPIO_PORT, &GPIO_InitStruct);
+static void OPAMP4_Init(void)
+{
+   OPAMP_HandleTypeDef hopamp4 = {0};
+
+   __HAL_RCC_SYSCFG_CLK_ENABLE();
+
+   hopamp4.Instance = OPAMP4;
+   hopamp4.Init.Mode = OPAMP_FOLLOWER_MODE;
+   hopamp4.Init.NonInvertingInput = OPAMP_NONINVERTINGINPUT_IO0;
+   hopamp4.Init.TimerControlledMuxmode = OPAMP_TIMERCONTROLLEDMUXMODE_DISABLE;
+   hopamp4.Init.UserTrimming = OPAMP_TRIMMING_FACTORY;
+
+   HAL_OPAMP_Init(&hopamp4);
+   HAL_OPAMP_SelfCalibrate(&hopamp4);
+   HAL_OPAMP_Start(&hopamp4);
 }
 
 /**
- * @brief ADC3_Init
+ * @brief ADC4_Init
  *
  */
-static void ADC3_Init(void)
+static void ADC4_Init(void)
 {
-   ADC_HandleTypeDef hadc3;
-   ADC_MultiModeTypeDef multimode = {0};
-   ADC_ChannelConfTypeDef sConfig = {0};
+   ADC_HandleTypeDef hadc4;
+   ADC_InjectionConfTypeDef hInjeConf = {0};
 
-   /** Common config */
-   hadc3.Instance = ADC3;
-   hadc3.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-   hadc3.Init.Resolution = ADC_RESOLUTION_12B;
-   hadc3.Init.ScanConvMode = ADC_SCAN_DISABLE;
-   hadc3.Init.ContinuousConvMode = ENABLE;
-   hadc3.Init.DiscontinuousConvMode = DISABLE;
-   hadc3.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-   hadc3.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-   hadc3.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-   hadc3.Init.NbrOfConversion = 1;
-   hadc3.Init.DMAContinuousRequests = DISABLE;
-   hadc3.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-   hadc3.Init.LowPowerAutoWait = DISABLE;
-   hadc3.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
-   if (HAL_ADC_Init(&hadc3) != HAL_OK)
-   {
-      Error_Handler();
-   }
+   __HAL_RCC_ADC34_CLK_ENABLE();
 
-   /** Configure the ADC multi-mode */
-   multimode.Mode = ADC_MODE_INDEPENDENT;
-   if (HAL_ADCEx_MultiModeConfigChannel(&hadc3, &multimode) != HAL_OK)
-   {
-      Error_Handler();
-   }
+   hadc4.Instance = ADC4;
+   hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
+   hadc4.Init.Resolution = ADC_RESOLUTION_12B;
+   hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+   hadc4.Init.ScanConvMode = ADC_SCAN_DISABLE;
+   hadc4.Init.ContinuousConvMode = DISABLE;
+   hadc4.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+   HAL_ADC_Init(&hadc4);
+   HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
 
-   /** Configure Regular Channel */
-   sConfig.Channel = ADC_CHANNEL_5;
-   sConfig.Rank = ADC_REGULAR_RANK_1;
-   sConfig.SingleDiff = ADC_SINGLE_ENDED;
-   sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
-   sConfig.OffsetNumber = ADC_OFFSET_NONE;
-   sConfig.Offset = 0;
-   if (HAL_ADC_ConfigChannel(&hadc3, &sConfig) != HAL_OK)
-   {
-      Error_Handler();
-   }
+   hInjeConf.InjectedChannel = ADC_CHANNEL_3;
+   hInjeConf.InjectedRank = ADC_INJECTED_RANK_1;
+   hInjeConf.InjectedSamplingTime = ADC_SAMPLETIME_181CYCLES_5;
+   hInjeConf.InjectedSingleDiff = ADC_SINGLE_ENDED;
+   hInjeConf.ExternalTrigInjecConvEdge = ADC_EXTERNALTRIGINJECCONV_EDGE_RISING;
+   hInjeConf.ExternalTrigInjecConv = ADC_EXTERNALTRIGINJECCONV_T1_CC4;
+   HAL_ADCEx_InjectedConfigChannel(&hadc4, &hInjeConf);
+
+   HAL_ADCEx_InjectedStart(&hadc4);
+}
+
+/**
+ * @brief VBUS_TIM1_Trig_Init
+ *
+ * @param  None
+ * @retval None
+ */
+static void TIM1_Trig_Init(uint16_t sample_shift_ticks)
+{
+   TIM_OC_InitTypeDef s = {0};
+
+   s.OCMode = TIM_OCMODE_TOGGLE;
+   s.Pulse = (__HAL_TIM_GET_AUTORELOAD(&htim1) / 2U) + sample_shift_ticks;
+   s.OCPolarity = TIM_OCPOLARITY_HIGH;
+
+   HAL_TIM_OC_ConfigChannel(&htim1, &s, TIM_CHANNEL_4);
+   HAL_TIM_OC_Start(&htim1, TIM_CHANNEL_4);
 }
 
 /**
@@ -193,5 +212,7 @@ void ECU_HW_Init(void)
    SystemClock_Config();
 
    GPIO_Init();
-   ADC3_Init();
+   OPAMP4_Init();
+   ADC4_Init();
+   TIM1_Trig_Init(1);
 }
