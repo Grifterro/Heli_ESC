@@ -45,26 +45,31 @@ _Min_Stack_Size = 0x400; /* required amount of stack */
 /* Memories definition */
 MEMORY
 {
-  CCMRAM    (xrw)    : ORIGIN = 0x10000000,   LENGTH = 8K
-  RAM       (xrw)    : ORIGIN = 0x20000000,   LENGTH = 32K
-  FLASH     (rx)     : ORIGIN = 0x08000000,    LENGTH = 32K
+  CCMRAM      (xrw)    : ORIGIN = 0x10000000, LENGTH = 8K
+  RAM         (xrw)    : ORIGIN = 0x20000000, LENGTH = 32K
+  BTL_FLASH   (rx)     : ORIGIN = 0x08000000, LENGTH = 32K
+  APP_FLASH   (rx)     : ORIGIN = 0x08008000, LENGTH = 92K
+  EMUL_EEPROM (rx)     : ORIGIN = 0x0801F000, LENGTH = 4k
 }
 
-PROVIDE(APP_ADDRESS = ORIGIN(FLASH));
+PROVIDE(APP_ADDRESS = ORIGIN(APP_FLASH));
+PROVIDE(__emul_eeprom_start = ORIGIN(EMUL_EEPROM));
+PROVIDE(__emul_eeprom_end   = ORIGIN(EMUL_EEPROM) + LENGTH(EMUL_EEPROM));
+PROVIDE(__emul_eeprom_size  = LENGTH(EMUL_EEPROM));
 
 /* Sections */
 SECTIONS
 {
 
-  /* The startup code into "FLASH" Rom type memory */
+  /* The startup code into "BTL_FLASH" Rom type memory */
   .isr_vector :
   {
     . = ALIGN(4);
     KEEP(*(.isr_vector)) /* Startup code */
     . = ALIGN(4);
-  } >FLASH
+  } >BTL_FLASH
 
-  /* The program code and other data into "FLASH" Rom type memory */
+  /* The program code and other data into "BTL_FLASH" Rom type memory */
   .text :
   {
     . = ALIGN(4);
@@ -79,23 +84,23 @@ SECTIONS
 
     . = ALIGN(4);
     _etext = .;        /* define a global symbols at end of code */
-  } >FLASH
+  } >BTL_FLASH
 
-  /* Constant data into "FLASH" Rom type memory */
+  /* Constant data into "BTL_FLASH" Rom type memory */
   .rodata :
   {
     . = ALIGN(4);
     *(.rodata)         /* .rodata sections (constants, strings, etc.) */
     *(.rodata*)        /* .rodata* sections (constants, strings, etc.) */
     . = ALIGN(4);
-  } >FLASH
+  } >BTL_FLASH
 
   .ARM.extab (READONLY) : /* The "READONLY" keyword is only supported in GCC11 and later, remove it if using GCC10 or earlier. */
   {
     . = ALIGN(4);
     *(.ARM.extab* .gnu.linkonce.armextab.*)
     . = ALIGN(4);
-  } >FLASH
+  } >BTL_FLASH
 
   .ARM (READONLY) : /* The "READONLY" keyword is only supported in GCC11 and later, remove it if using GCC10 or earlier. */
   {
@@ -104,7 +109,7 @@ SECTIONS
     *(.ARM.exidx*)
     __exidx_end = .;
     . = ALIGN(4);
-  } >FLASH
+  } >BTL_FLASH
 
   .preinit_array (READONLY) : /* The "READONLY" keyword is only supported in GCC11 and later, remove it if using GCC10 or earlier. */
   {
@@ -113,7 +118,7 @@ SECTIONS
     KEEP (*(.preinit_array*))
     PROVIDE_HIDDEN (__preinit_array_end = .);
     . = ALIGN(4);
-  } >FLASH
+  } >BTL_FLASH
 
   .init_array (READONLY) : /* The "READONLY" keyword is only supported in GCC11 and later, remove it if using GCC10 or earlier. */
   {
@@ -123,7 +128,7 @@ SECTIONS
     KEEP (*(.init_array*))
     PROVIDE_HIDDEN (__init_array_end = .);
     . = ALIGN(4);
-  } >FLASH
+  } >BTL_FLASH
 
   .fini_array (READONLY) : /* The "READONLY" keyword is only supported in GCC11 and later, remove it if using GCC10 or earlier. */
   {
@@ -133,7 +138,7 @@ SECTIONS
     KEEP (*(.fini_array*))
     PROVIDE_HIDDEN (__fini_array_end = .);
     . = ALIGN(4);
-  } >FLASH
+  } >BTL_FLASH
 
   /* Used by the startup to initialize data */
   _sidata = LOADADDR(.data);
@@ -151,7 +156,7 @@ SECTIONS
     . = ALIGN(4);
     _edata = .;        /* define a global symbol at data end */
 
-  } >RAM AT> FLASH
+  } >RAM AT> BTL_FLASH
 
   _siccmram = LOADADDR(.ccmram);
 
@@ -170,7 +175,7 @@ SECTIONS
 
     . = ALIGN(4);
     _eccmram = .;       /* create a global symbol at ccmram end */
-  } >CCMRAM AT> FLASH
+  } >CCMRAM AT> BTL_FLASH
 
   /* Uninitialized data section into "RAM" Ram type memory */
   . = ALIGN(4);
@@ -198,6 +203,12 @@ SECTIONS
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
   } >RAM
+
+  /* Emulate EEPROM section */
+  .emul_eeprom (NOLOAD) :
+  {
+    . = ALIGN(8);
+  } > EMUL_EEPROM
 
   /* Remove information from the compiler libraries */
   /DISCARD/ :

@@ -27,6 +27,7 @@ target_include_directories(BOOTLOADER_objs BEFORE PRIVATE
 target_compile_definitions(BOOTLOADER_objs PRIVATE
     BOOTLOADER
     STM32F303xC
+    USER_VECT_TAB_ADDRESS
 )
 
 
@@ -47,5 +48,4 @@ target_include_directories(HAL_BOOTLOADER PRIVATE
 target_compile_definitions(HAL_BOOTLOADER PRIVATE
     STM32F303xC
     USE_HAL_DRIVER
-    USER_VECT_TAB_ADDRESS
 )

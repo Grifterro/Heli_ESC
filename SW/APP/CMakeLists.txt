@@ -28,6 +28,7 @@ target_include_directories(APP_objs BEFORE PRIVATE
 target_compile_definitions(APP_objs PRIVATE
     APP
     STM32F303xC
+    USER_VECT_TAB_ADDRESS
 )
 
 
@@ -48,5 +49,4 @@ target_include_directories(HAL_APP PRIVATE
 target_compile_definitions(HAL_APP PRIVATE
     STM32F303xC
     USE_HAL_DRIVER
-    USER_VECT_TAB_ADDRESS
 )

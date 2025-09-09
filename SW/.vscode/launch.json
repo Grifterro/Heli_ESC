@@ -24,36 +24,9 @@
       "executable": "${workspaceFolder}/Out/Bin/BootLoader.elf",
       "device": "STM32F303CBTx",
       "interface": "swd",
-      "runToEntryPoint": "btl_main",
+      "runToEntryPoint": "main",
       "preLaunchTask": "Build: BootLoader",
       "svdFile": "${workspaceFolder}/MCU_Core/CMSIS/Device/ST/STM32F3xx/SVD/STM32F303.svd"
-    },
-    {
-      "name": "Debug BootLoaderUpdater (J-Link)",
-      "type": "cortex-debug",
-      "request": "launch",
-      "servertype": "jlink",
-      "cwd": "${workspaceFolder}/Out/Bin",
-      "executable": "${workspaceFolder}/Out/Bin/BootLoaderUpdater.elf",
-      "device": "STM32F303CBTx",
-      "interface": "swd",
-      "runToEntryPoint": "updater_main",
-      "preLaunchTask": "Build: BootLoaderUpdater",
-      "svdFile": "${workspaceFolder}/MCU_Core/CMSIS/Device/ST/STM32F3xx/SVD/STM32F303.svd"
-    },
-    {
-      "name": "Debug ALL (J-Link)",
-      "type": "cortex-debug",
-      "request": "launch",
-      "servertype": "jlink",
-      "cwd": "${workspaceFolder}/Out/Bin",
-      "executable": "${workspaceFolder}/Out/Bin/ALL.elf",
-      "device": "STM32F303CBTx",
-      "interface": "swd",
-      "runToEntryPoint": "btl_main",
-      "preLaunchTask": "Build: ALL",
-      "svdFile": "${workspaceFolder}/MCU_Core/CMSIS/Device/ST/STM32F3xx/SVD/STM32F303.svd",
-      //"showDevDebugOutput": "raw"
     }
   ]
 }

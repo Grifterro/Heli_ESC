@@ -8,25 +8,24 @@
  * email: fabian.donchor@gmail.com
  * All rights reserved.
  ******************************************************************************
-*/
+ */
 
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
 
 /* Private includes ----------------------------------------------------------*/
 #include "board_cfg.h"
+#include "esc_hw_lla.h"
 
 /* Private macro -------------------------------------------------------------*/
 
 /* Private define ------------------------------------------------------------*/
-#define BOOTLOADER_ADDRESS              ((uint32_t) 0x08000000U)
-#define BOOTLOADER_UPDATER_ADDRESS      ((uint32_t) 0x080E0000U)
-
-
 
 /* Private typedef -----------------------------------------------------------*/
 
 /* Private variables ---------------------------------------------------------*/
+extern const uint32_t BTL_ADDRESS;
+#define BTL_BASE ((uint32_t)&BTL_ADDRESS)
 
 /* Private function prototypes -----------------------------------------------*/
 
@@ -35,69 +34,73 @@ void App_JumpTo_BootLoader(void);
 
 /* Private function ---------------------------------------------------------*/
 /**
-* @brief 
-* @retval NONE
-*/
+ * @brief
+ * @retval NONE
+ */
 int main(void)
-{ 
-    HAL_Init();
-    ECU_HW_Init();
+{
+   ECU_HW_Init();
 
-    while (1)
-    {
-        ; /* Safety loop */
-    }
-  return 0;
+   ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__LED_STATUS_TURN_ON);
+   ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__LED_STATUS_TURN_OFF);
+
+   while (1)
+   {
+      ; /* Safety loop */
+   }
+   return 0;
 }
 
-
-
 /**
-* @brief Jumping from the user application to the user BootLoader.
-* 
-* @param  None
-* @retval None
-*/
-void App_JumpTo_BootLoader(void)
+ * @brief Jumping from the user application to the user BootLoader.
+ *
+ * @param  None
+ * @retval None
+ */
+__attribute__((noreturn)) void App_JumpTo_BootLoader(void)
 {
-    // Disable all interrupts
-    __disable_irq();
+   // Disable all interrupts
+   __disable_irq();
 
-    // Deactivate all NVIC interrupts
-    for (uint32_t i = 0; i < 8; i++)
-    {
-        NVIC->ICER[i] = 0xFFFFFFFF;
-        NVIC->ICPR[i] = 0xFFFFFFFF;
-    }
+   // Deactivate all NVIC interrupts
+   for (uint32_t i = 0; i < 8; i++)
+   {
+      NVIC->ICER[i] = 0xFFFFFFFF;
+      NVIC->ICPR[i] = 0xFFFFFFFF;
+   }
 
-    // Disable SysTick
-    SysTick->CTRL = 0;
-    SysTick->LOAD = 0;
-    SysTick->VAL  = 0;
+   // Disable SysTick
+   SysTick->CTRL = 0;
+   SysTick->LOAD = 0;
+   SysTick->VAL = 0;
 
-    // Read the stack pointer (MSP) and the Reset_Handler address from the application
-    uint32_t bootloader_stack = *(volatile uint32_t*)BOOTLOADER_ADDRESS;
-    uint32_t bootloader_reset_handler = *(volatile uint32_t*)(BOOTLOADER_ADDRESS + 4);
+   HAL_RCC_DeInit();
 
-    // Set the new stack
-    __set_MSP(bootloader_stack);
+   // Read the stack pointer (MSP) and the Reset_Handler address from the bootloader
+   uint32_t btl_msp = *(__IO uint32_t *)(BTL_BASE + 0);
+   uint32_t btl_reset = *(__IO uint32_t *)(BTL_BASE + 4);
 
-    // Set the application's vector table address (VTOR)
-    SCB->VTOR = BOOTLOADER_ADDRESS;
+   if ((btl_msp & 0x2FFE0000u) != 0x20000000u)
+   {
+      NVIC_SystemReset();
+   }
 
-    // Optional: instruction barrier (for safety)
-    __DSB();
-    __ISB();
+   // Set the new stack
+   __set_MSP(btl_msp);
 
-    // Jump to the BootLoader
-    void (*bootloader_entry)(void) = (void*)bootloader_reset_handler;
-    bootloader_entry();
+   // Set the bootloader's vector table address (VTOR)
+   SCB->VTOR = BTL_BASE;
 
-    // This line should not be reached
-    while (1)
-    {
-        ;
-    }
+   // Optional: instruction barrier (for safety)
+   __DSB();
+   __ISB();
+
+   // Jump to the bootloader
+   void (*btl_entry)(void) = (void (*)(void))(btl_reset | 1u);
+   btl_entry();
+
+   // This line should not be reached
+   while (1);
 }
 
 /* Exported function ----------------------------------------------------------*/

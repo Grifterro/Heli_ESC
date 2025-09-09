@@ -1,8 +1,9 @@
 /**
  ******************************************************************************
- * @file           : board_cfg.h
+ * @file           : esc_hw_lla.h
  * @brief          : Header for board_cfg.c file.
- *                   This file contains the common defines of the board configuration.
+ *                   This file contains the common defines of the
+ *                   HW low level abstraction.
  ******************************************************************************
  * @attention This software has been developed by Fabian Donchór since 2025.
  * email: fabian.donchor@gmail.com
@@ -11,25 +12,23 @@
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef BOARD_CFG_H
-#define BOARD_CFG_H
+#ifndef ESC_HW_LLA_H
+#define ESC_HW_LLA_H
 
 /* Includes ------------------------------------------------------------------*/
-#include <stdint.h>
 
 /* Private includes ----------------------------------------------------------*/
-#include "stm32f3xx.h"
-#include "stm32f3xx_hal.h"
+// #include "stm32f3xx.h"
+//  #include "stm32f3xx_hal.h"
 
 /* Exported macro ------------------------------------------------------------*/
 
 /* Exported definitions ------------------------------------------------------*/
-#define ESC_LED_STATUS_GPIO_PORT GPIOB
-#define ESC_LED_STATUS_GPIO_PIN GPIO_PIN_2
-#define ESC_VBUS_GPIO_PORT GPIOB
-#define ESC_VBUS_GPIO_PIN GPIO_PIN_13
+#define ESC_HW_LLA__LED_STATUS_TURN_ON GPIO_PIN_SET
+#define ESC_HW_LLA__LED_STATUS_TURN_OFF GPIO_PIN_RESET
 
 /* Exported types ------------------------------------------------------------*/
+typedef GPIO_PinState ESC_HW_LLA__GPIO_PinState;
 
 /* Exported constants --------------------------------------------------------*/
 
@@ -37,18 +36,7 @@
 
 /* Exported functions prototypes ---------------------------------------------*/
 /**
- * @brief ECU_HW_Init
- *
- * @param  None
- * @retval None
+ * @brief ESC_HW_LLA__SetEscLedSts()
  */
-void ECU_HW_Init(void);
-
-/**
- * @brief
- *
- * @param  None
- * @retval None
- */
-
-#endif /* BOARD_CFG_H */
+void ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__GPIO_PinState PinState);
+#endif /* ESC_HW_LLA_H */

@@ -11,13 +11,13 @@
     "stm32f3xx_hal_dma_ex.h": "c",
     "task.h": "c",
     "stm32f3xx_hal_conf.h": "c",
-    "modems_cfg.h": "c",
-    "modems_lla.h": "c"
+    "board_cfg.h": "c"
   },
   "cortex-debug.variableUseNaturalFormat": true,
-  "[c]": {"editor.defaultFormatter": "xaver.clang-format"},
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "clang-format.style": "file"
 }
-
