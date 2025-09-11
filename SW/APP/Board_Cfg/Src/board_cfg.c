@@ -129,7 +129,10 @@ static void OPAMP4_Init(void)
    hopamp4.Init.TimerControlledMuxmode = OPAMP_TIMERCONTROLLEDMUXMODE_DISABLE;
    hopamp4.Init.UserTrimming = OPAMP_TRIMMING_FACTORY;
 
-   HAL_OPAMP_Init(&hopamp4);
+  if (HAL_OPAMP_Init(&hopamp4) != HAL_OK)
+  {
+    Error_Handler();
+  }
    HAL_OPAMP_SelfCalibrate(&hopamp4);
    HAL_OPAMP_Start(&hopamp4);
 }
@@ -141,32 +144,41 @@ static void OPAMP4_Init(void)
 static void ADC4_Init(void)
 {
    ADC_HandleTypeDef hadc4 = {0};
+   ADC_ChannelConfTypeDef sConfig = {0};
 
    __HAL_RCC_ADC34_CLK_ENABLE();
 
-   hadc4.Instance = ADC4;
-   hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-   hadc4.Init.Resolution = ADC_RESOLUTION_12B;
-   hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-   hadc4.Init.ScanConvMode = ADC_SCAN_DISABLE;
-   hadc4.Init.DiscontinuousConvMode = DISABLE;
-   hadc4.Init.ContinuousConvMode = ENABLE;
-   hadc4.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-   hadc4.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIG_EDGE_NONE;
-   hadc4.Init.DMAContinuousRequests = ENABLE;
-   hadc4.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
-   HAL_ADC_Init(&hadc4);
-   HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
+  hadc4.Instance = ADC4;
+  hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
+  hadc4.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc4.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc4.Init.ContinuousConvMode = ENABLE;
+  hadc4.Init.DiscontinuousConvMode = DISABLE;
+  hadc4.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc4.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc4.Init.NbrOfConversion = 1;
+  hadc4.Init.DMAContinuousRequests = DISABLE;
+  hadc4.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc4.Init.LowPowerAutoWait = DISABLE;
+  hadc4.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+  if (HAL_ADC_Init(&hadc4) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
-   ADC_ChannelConfTypeDef ADC_ChannelConfStruct = {0};
-   ADC_ChannelConfStruct.Channel = ADC_CHANNEL_3;
-   ADC_ChannelConfStruct.Rank = ADC_REGULAR_RANK_1;
-   ADC_ChannelConfStruct.SamplingTime = ADC_SAMPLETIME_181CYCLES_5;
-   HAL_ADC_ConfigChannel(&hadc4, &ADC_ChannelConfStruct);
+  sConfig.Channel = ADC_CHANNEL_3;
+  sConfig.Rank = ADC_REGULAR_RANK_1;
+  sConfig.SingleDiff = ADC_SINGLE_ENDED;
+  sConfig.SamplingTime = ADC_SAMPLETIME_181CYCLES_5;
+  sConfig.OffsetNumber = ADC_OFFSET_NONE;
+  sConfig.Offset = 0;
+  if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
    HAL_ADC_Start_DMA(&hadc4, (uint32_t*)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH);
-   __HAL_DMA_ENABLE_IT(hadc4.DMA_Handle, DMA_IT_HT);
-   __HAL_DMA_DISABLE_IT(hadc4.DMA_Handle, DMA_IT_TC);
 }
 
 static void MX_DMA_Init(void)
