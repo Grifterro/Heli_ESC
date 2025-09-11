@@ -169,6 +169,13 @@ static void ADC4_Init(void)
    __HAL_DMA_DISABLE_IT(hadc4.DMA_Handle, DMA_IT_TC);
 }
 
+static void MX_DMA_Init(void)
+{
+  __HAL_RCC_DMA2_CLK_ENABLE();
+  HAL_NVIC_SetPriority(DMA2_Channel2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Channel2_IRQn);
+}
+
 /**
  * @brief Error_Handler
  *
