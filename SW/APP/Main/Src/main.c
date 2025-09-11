@@ -27,6 +27,9 @@
 extern const uint32_t BTL_ADDRESS;
 #define BTL_BASE ((uint32_t)&BTL_ADDRESS)
 
+uint32_t vBusDMA_Buffer[ESC_VBUS_DMA_BUFFER_LENGTH] = {0};
+static volatile uint32_t vbat_mV_out = 0;
+
 /* Private function prototypes -----------------------------------------------*/
 
 /* Private function prototypes -----------------------------------------------*/
@@ -42,13 +45,33 @@ int main(void)
    ECU_HW_Init();
 
    ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__LED_STATUS_TURN_ON);
-   ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__LED_STATUS_TURN_OFF);
 
    while (1)
    {
-      ; /* Safety loop */
+      HAL_Delay(1000);
+      vbat_mV_out = vbat_mV_out;
    }
    return 0;
+}
+
+static inline void VBUS_ProcessBlock(uint32_t *p, uint32_t n)
+{
+   uint32_t sum = 0;
+   for (uint32_t i = 0; i < n; ++i) sum += p[i];
+   uint32_t avg = sum / n;
+
+   const float vdda_mV = 3300.0f;  // na start stałe; docelowo: policz z VREFINT
+   float vbat_mV_f = (avg * (vdda_mV / 4095.0f)) / ESC_VBUS_K;
+   if (vbat_mV_f < 0) vbat_mV_f = 0;
+   vbat_mV_out = (uint32_t)(vbat_mV_f + 0.5f);
+}
+
+void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)
+{
+   if (hadc->Instance == ADC4)
+   {
+      VBUS_ProcessBlock(&vBusDMA_Buffer[0], ESC_VBUS_DMA_BUFFER_LENGTH / 2);
+   }
 }
 
 /**

@@ -24,13 +24,13 @@
 
 /* Private variables ---------------------------------------------------------*/
 static TIM_HandleTypeDef htim1;
+extern uint32_t vBusDMA_Buffer[ESC_VBUS_DMA_BUFFER_LENGTH];
 
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
 static void GPIO_Init(void);
 static void OPAMP4_Init(void);
 static void ADC4_Init(void);
-static void TIM1_Trig_Init(uint16_t sample_shift_ticks);
 static void Error_Handler(void);
 
 /* Private function ----------------------------------------------------------*/
@@ -140,8 +140,7 @@ static void OPAMP4_Init(void)
  */
 static void ADC4_Init(void)
 {
-   ADC_HandleTypeDef hadc4;
-   ADC_InjectionConfTypeDef hInjeConf = {0};
+   ADC_HandleTypeDef hadc4 = {0};
 
    __HAL_RCC_ADC34_CLK_ENABLE();
 
@@ -150,38 +149,24 @@ static void ADC4_Init(void)
    hadc4.Init.Resolution = ADC_RESOLUTION_12B;
    hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
    hadc4.Init.ScanConvMode = ADC_SCAN_DISABLE;
-   hadc4.Init.ContinuousConvMode = DISABLE;
+   hadc4.Init.DiscontinuousConvMode = DISABLE;
+   hadc4.Init.ContinuousConvMode = ENABLE;
+   hadc4.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+   hadc4.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIG_EDGE_NONE;
+   hadc4.Init.DMAContinuousRequests = ENABLE;
    hadc4.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
    HAL_ADC_Init(&hadc4);
    HAL_ADCEx_Calibration_Start(&hadc4, ADC_SINGLE_ENDED);
 
-   hInjeConf.InjectedChannel = ADC_CHANNEL_3;
-   hInjeConf.InjectedRank = ADC_INJECTED_RANK_1;
-   hInjeConf.InjectedSamplingTime = ADC_SAMPLETIME_181CYCLES_5;
-   hInjeConf.InjectedSingleDiff = ADC_SINGLE_ENDED;
-   hInjeConf.ExternalTrigInjecConvEdge = ADC_EXTERNALTRIGINJECCONV_EDGE_RISING;
-   hInjeConf.ExternalTrigInjecConv = ADC_EXTERNALTRIGINJECCONV_T1_CC4;
-   HAL_ADCEx_InjectedConfigChannel(&hadc4, &hInjeConf);
+   ADC_ChannelConfTypeDef ADC_ChannelConfStruct = {0};
+   ADC_ChannelConfStruct.Channel = ADC_CHANNEL_3;
+   ADC_ChannelConfStruct.Rank = ADC_REGULAR_RANK_1;
+   ADC_ChannelConfStruct.SamplingTime = ADC_SAMPLETIME_181CYCLES_5;
+   HAL_ADC_ConfigChannel(&hadc4, &ADC_ChannelConfStruct);
 
-   HAL_ADCEx_InjectedStart(&hadc4);
-}
-
-/**
- * @brief VBUS_TIM1_Trig_Init
- *
- * @param  None
- * @retval None
- */
-static void TIM1_Trig_Init(uint16_t sample_shift_ticks)
-{
-   TIM_OC_InitTypeDef s = {0};
-
-   s.OCMode = TIM_OCMODE_TOGGLE;
-   s.Pulse = (__HAL_TIM_GET_AUTORELOAD(&htim1) / 2U) + sample_shift_ticks;
-   s.OCPolarity = TIM_OCPOLARITY_HIGH;
-
-   HAL_TIM_OC_ConfigChannel(&htim1, &s, TIM_CHANNEL_4);
-   HAL_TIM_OC_Start(&htim1, TIM_CHANNEL_4);
+   HAL_ADC_Start_DMA(&hadc4, (uint32_t*)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH);
+   __HAL_DMA_ENABLE_IT(hadc4.DMA_Handle, DMA_IT_HT);
+   __HAL_DMA_DISABLE_IT(hadc4.DMA_Handle, DMA_IT_TC);
 }
 
 /**
@@ -210,9 +195,15 @@ void ECU_HW_Init(void)
 {
    HAL_Init();
    SystemClock_Config();
+   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq() / 1000U);
+   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
+   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+
+   __set_BASEPRI(0);
+   __set_PRIMASK(0);
+   __enable_irq();
 
    GPIO_Init();
    OPAMP4_Init();
    ADC4_Init();
-   TIM1_Trig_Init(1);
 }

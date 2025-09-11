@@ -27,9 +27,10 @@
 /* Defines for VBUS line (power supply for ESC) */
 #define ESC_VBUS_R1_OHM ((float)169000.0)
 #define ESC_VBUS_R2_OHM ((float)18000.0)
-#define ESC_VBUS_K (VBAT_R2_OHM / (VBAT_R1_OHM + VBAT_R2_OHM))
+#define ESC_VBUS_K (ESC_VBUS_R2_OHM / (ESC_VBUS_R1_OHM + ESC_VBUS_R2_OHM))
 #define ESC_VBUS_GPIO_PORT GPIOB
 #define ESC_VBUS_GPIO_PIN GPIO_PIN_13
+#define ESC_VBUS_DMA_BUFFER_LENGTH ((size_t)200)
 
 /* Defines for ESC LED Status */
 #define ESC_LED_STATUS_GPIO_PORT GPIOB
