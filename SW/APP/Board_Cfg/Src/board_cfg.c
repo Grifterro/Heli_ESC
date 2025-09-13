@@ -24,13 +24,18 @@
 
 /* Private variables ---------------------------------------------------------*/
 static TIM_HandleTypeDef htim1;
+ADC_HandleTypeDef hadc4;
+DMA_HandleTypeDef hdma_adc4;
+OPAMP_HandleTypeDef hopamp4;
+
 extern uint32_t vBusDMA_Buffer[ESC_VBUS_DMA_BUFFER_LENGTH];
 
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
 static void GPIO_Init(void);
-static void OPAMP4_Init(void);
-static void ADC4_Init(void);
+static void OPAMP_Init(void);
+static void ADC_Init(void);
+static void DMA_Init(void);
 static void Error_Handler(void);
 
 /* Private function ----------------------------------------------------------*/
@@ -117,36 +122,26 @@ static void GPIO_Init(void)
    HAL_GPIO_Init(ESC_VBUS_GPIO_PORT, &GPIO_InitStruct);
 }
 
-static void OPAMP4_Init(void)
+static void OPAMP_Init(void)
 {
-   OPAMP_HandleTypeDef hopamp4 = {0};
-
-   __HAL_RCC_SYSCFG_CLK_ENABLE();
-
-   hopamp4.Instance = OPAMP4;
-   hopamp4.Init.Mode = OPAMP_FOLLOWER_MODE;
-   hopamp4.Init.NonInvertingInput = OPAMP_NONINVERTINGINPUT_IO0;
-   hopamp4.Init.TimerControlledMuxmode = OPAMP_TIMERCONTROLLEDMUXMODE_DISABLE;
-   hopamp4.Init.UserTrimming = OPAMP_TRIMMING_FACTORY;
-
+  hopamp4.Instance = OPAMP4;
+  hopamp4.Init.Mode = OPAMP_FOLLOWER_MODE;
+  hopamp4.Init.NonInvertingInput = OPAMP_NONINVERTINGINPUT_IO0;
+  hopamp4.Init.TimerControlledMuxmode = OPAMP_TIMERCONTROLLEDMUXMODE_DISABLE;
+  hopamp4.Init.UserTrimming = OPAMP_TRIMMING_FACTORY;
   if (HAL_OPAMP_Init(&hopamp4) != HAL_OK)
   {
     Error_Handler();
   }
-   HAL_OPAMP_SelfCalibrate(&hopamp4);
-   HAL_OPAMP_Start(&hopamp4);
 }
 
 /**
- * @brief ADC4_Init
+ * @brief ADC_Init
  *
  */
-static void ADC4_Init(void)
+static void ADC_Init(void)
 {
-   ADC_HandleTypeDef hadc4 = {0};
-   ADC_ChannelConfTypeDef sConfig = {0};
-
-   __HAL_RCC_ADC34_CLK_ENABLE();
+  ADC_ChannelConfTypeDef sConfig = {0};
 
   hadc4.Instance = ADC4;
   hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
@@ -181,9 +176,10 @@ static void ADC4_Init(void)
    HAL_ADC_Start_DMA(&hadc4, (uint32_t*)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH);
 }
 
-static void MX_DMA_Init(void)
+static void DMA_Init(void)
 {
   __HAL_RCC_DMA2_CLK_ENABLE();
+
   HAL_NVIC_SetPriority(DMA2_Channel2_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Channel2_IRQn);
 }
@@ -223,6 +219,9 @@ void ECU_HW_Init(void)
    __enable_irq();
 
    GPIO_Init();
-   OPAMP4_Init();
-   ADC4_Init();
+   DMA_Init();
+   OPAMP_Init();
+   ADC_Init();
+
+   
 }
