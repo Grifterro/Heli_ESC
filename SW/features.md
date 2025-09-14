@@ -79,3 +79,138 @@ Watchdog thresholds: map to your pack (e.g., x V/cell × cells).
 
 Why it works:
 We (1) remove HF noise in hardware at the ADC pin, (2) sample only in a “quiet” point of the PWM cycle via timer trigger, and (3) finish with light digital filtering and VDDA compensation. The result is a low-jitter, low-latency VBAT reading that’s suitable both for telemetry and for real-time protections in an ESC.
+
+
+
+ToDo
+SVPWM (Space Vector Pulse Width Modulation) – czyli modulacja szerokości impulsów metodą wektora przestrzennego – to nowoczesna technika generowania sygnałów PWM dla trójfazowego mostka tranzystorowego (inwertera), stosowana np. w sterownikach BLDC/AC (FOC).
+
+1. Idea w skrócie
+
+W klasycznym sinusoidalnym PWM (SPWM) każda faza jest modulowana osobno względem sinusoidy odniesienia. To proste, ale nie wykorzystuje w pełni możliwości napięcia szyny DC.
+
+SVPWM traktuje układ 3-fazowy jako wektor napięcia w płaszczyźnie α–β (Clarke transform).
+
+Wyobrażasz sobie heksagon tworzony przez 6 stanów aktywnych mostka.
+
+Aktualny „wektor referencyjny” (wynik z transformacji Parka w FOC) jest aproksymowany przez kombinację dwóch sąsiednich wektorów aktywnych + wektora zerowego.
+
+Dzięki temu napięcie fazowe lepiej odwzorowuje sinusoidę, a amplituda możliwego napięcia wyjściowego rośnie o ~15% względem SPWM.
+
+2. Kluczowe cechy SVPWM
+
+Większa amplituda wyjściowa: do 
+3
+/
+2
+≈
+0.866
+  
+𝑉
+𝑑
+𝑐
+3
+	​
+
+/2≈0.866V
+dc
+	​
+
+ zamiast 0.785 Vdc w SPWM.
+
+Mniejsze harmoniczne THD: lepsza jakość przebiegów, mniej strat w silniku.
+
+Równe obciążenie faz i bardziej efektywne wykorzystanie szyny DC.
+
+Naturalne dopasowanie do algorytmów FOC (Field-Oriented Control), gdzie masz bezpośrednio wektor napięcia 
+(
+𝑉
+𝛼
+,
+𝑉
+𝛽
+)
+(V
+α
+	​
+
+,V
+β
+	​
+
+).
+
+3. Jak to działa „w kodzie” (uproszczone kroki)
+
+Masz żądane napięcie w układzie α–β (po transformacjach Clarke/Park).
+
+Znajdujesz sektor heksagonu, w którym leży wektor (jest ich 6).
+
+Obliczasz czasy załączenia dwóch wektorów aktywnych i wektora zerowego:
+
+𝑇
+1
+,
+𝑇
+2
+,
+𝑇
+0
+T
+1
+	​
+
+,T
+2
+	​
+
+,T
+0
+	​
+
+
+tak, by ich suma dała pełny okres PWM i wektor średni = wektor żądany.
+
+Rozdzielasz 
+𝑇
+0
+T
+0
+	​
+
+ symetrycznie na oba końce okresu → sygnały bramkowe są symetryczne, co zmniejsza harmoniczne.
+
+Generujesz 3 sygnały PWM (TIM1/TIM8 w STM32) do sterowania mostkiem.
+
+4. Dlaczego ESC używają SVPWM?
+
+Przy tych samych MOSFET-ach i szynie DC możesz dać większe napięcie fazowe → większe obroty/moc.
+
+Niższe harmoniczne = mniejsze straty w miedzi i rdzeniu + cichsza praca.
+
+Ułatwia implementację FOC (zamiast generować trzy sinusy, pracujesz bezpośrednio na wektorach).
+
+5. Przykład wizualny
+
+Wyobraź sobie sześciokąt z sześcioma wektorami aktywnymi (V1…V6). Wektor żądany (np. 45°) leży między V1 i V2. SVPWM dobiera proporcje czasu 
+𝑇
+1
+T
+1
+	​
+
+ i 
+𝑇
+2
+T
+2
+	​
+
+, tak że średnie napięcie w tym okresie odpowiada żądanemu wektorowi. Reszta czasu 
+𝑇
+0
+T
+0
+	​
+
+ to „zerowe” wektory (wszystkie górne włączone lub wszystkie dolne).

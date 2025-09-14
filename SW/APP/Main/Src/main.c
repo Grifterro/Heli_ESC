@@ -69,10 +69,10 @@ static inline void VBUS_ProcessBlock(uint16_t *p, uint32_t n)
    uint32_t avg = sum / n;
 
    const float vdda_mV = 3.3f;  // na start stałe; docelowo: policz z VREFINT
-   float k = ESC_VBUS_K - 0.01141;
+   float k = ESC_VBUS_K;
    float vbat_mV_f = (avg * (vdda_mV / 4095.0f)) / k;
    if (vbat_mV_f < 0) vbat_mV_f = 0;
-   vbat_mV_out = (float)(vbat_mV_f + 0.5f) * 10;
+   vbat_mV_out = (float)(vbat_mV_f + 0.5f);
 }
 
 void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)
