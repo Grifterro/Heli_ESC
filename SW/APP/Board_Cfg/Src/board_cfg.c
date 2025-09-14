@@ -36,6 +36,7 @@ static void GPIO_Init(void);
 static void OPAMP_Init(void);
 static void ADC_Init(void);
 static void DMA_Init(void);
+static void DMA_LinkADC_Init(ADC_HandleTypeDef* hadc);
 static void Error_Handler(void);
 
 /* Private function ----------------------------------------------------------*/
@@ -51,9 +52,6 @@ static void SystemClock_Config(void)
    RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
    RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
-   /** Initializes the RCC Oscillators according to the specified parameters
-    * in the RCC_OscInitTypeDef structure.
-    */
    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
    RCC_OscInitStruct.HSEState = RCC_HSE_ON;
    RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
@@ -66,8 +64,6 @@ static void SystemClock_Config(void)
       Error_Handler();
    }
 
-   /** Initializes the CPU, AHB and APB buses clocks
-    */
    RCC_ClkInitStruct.ClockType =
        RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
@@ -79,17 +75,12 @@ static void SystemClock_Config(void)
    {
       Error_Handler();
    }
-   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1 | RCC_PERIPHCLK_TIM1;
-   PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_SYSCLK;
-   PeriphClkInit.Tim1ClockSelection = RCC_TIM1CLK_PLLCLK;
+   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC34;
+   PeriphClkInit.Adc34ClockSelection = RCC_ADC34PLLCLK_DIV1;
    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
    {
       Error_Handler();
    }
-
-   /** Enables the Clock Security System
-    */
-   HAL_RCC_EnableCSS();
 }
 
 /**
@@ -124,15 +115,15 @@ static void GPIO_Init(void)
 
 static void OPAMP_Init(void)
 {
-  hopamp4.Instance = OPAMP4;
-  hopamp4.Init.Mode = OPAMP_FOLLOWER_MODE;
-  hopamp4.Init.NonInvertingInput = OPAMP_NONINVERTINGINPUT_IO0;
-  hopamp4.Init.TimerControlledMuxmode = OPAMP_TIMERCONTROLLEDMUXMODE_DISABLE;
-  hopamp4.Init.UserTrimming = OPAMP_TRIMMING_FACTORY;
-  if (HAL_OPAMP_Init(&hopamp4) != HAL_OK)
-  {
-    Error_Handler();
-  }
+   hopamp4.Instance = OPAMP4;
+   hopamp4.Init.Mode = OPAMP_FOLLOWER_MODE;
+   hopamp4.Init.NonInvertingInput = OPAMP_NONINVERTINGINPUT_IO0;
+   hopamp4.Init.TimerControlledMuxmode = OPAMP_TIMERCONTROLLEDMUXMODE_DISABLE;
+   hopamp4.Init.UserTrimming = OPAMP_TRIMMING_FACTORY;
+   if (HAL_OPAMP_Init(&hopamp4) != HAL_OK)
+   {
+      Error_Handler();
+   }
 }
 
 /**
@@ -141,47 +132,69 @@ static void OPAMP_Init(void)
  */
 static void ADC_Init(void)
 {
-  ADC_ChannelConfTypeDef sConfig = {0};
+   ADC_ChannelConfTypeDef sConfig = {0};
 
-  hadc4.Instance = ADC4;
-  hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-  hadc4.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc4.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hadc4.Init.ContinuousConvMode = ENABLE;
-  hadc4.Init.DiscontinuousConvMode = DISABLE;
-  hadc4.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  hadc4.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc4.Init.NbrOfConversion = 1;
-  hadc4.Init.DMAContinuousRequests = DISABLE;
-  hadc4.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-  hadc4.Init.LowPowerAutoWait = DISABLE;
-  hadc4.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
-  if (HAL_ADC_Init(&hadc4) != HAL_OK)
-  {
-    Error_Handler();
-  }
+   __HAL_RCC_ADC34_CLK_ENABLE();
 
-  sConfig.Channel = ADC_CHANNEL_3;
-  sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SingleDiff = ADC_SINGLE_ENDED;
-  sConfig.SamplingTime = ADC_SAMPLETIME_181CYCLES_5;
-  sConfig.OffsetNumber = ADC_OFFSET_NONE;
-  sConfig.Offset = 0;
-  if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
+   hadc4.Instance = ADC4;
+   hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
+   hadc4.Init.Resolution = ADC_RESOLUTION_12B;
+   hadc4.Init.ScanConvMode = ADC_SCAN_DISABLE;
+   hadc4.Init.ContinuousConvMode = ENABLE;
+   hadc4.Init.DiscontinuousConvMode = DISABLE;
+   hadc4.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+   hadc4.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+   hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+   hadc4.Init.NbrOfConversion = 1;
+   hadc4.Init.DMAContinuousRequests = DISABLE;
+   hadc4.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+   hadc4.Init.LowPowerAutoWait = DISABLE;
+   hadc4.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+   if (HAL_ADC_Init(&hadc4) != HAL_OK)
+   {
+      Error_Handler();
+   }
 
-   HAL_ADC_Start_DMA(&hadc4, (uint32_t*)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH);
+   sConfig.Channel = ADC_CHANNEL_3;
+   sConfig.Rank = ADC_REGULAR_RANK_1;
+   sConfig.SingleDiff = ADC_SINGLE_ENDED;
+   sConfig.SamplingTime = ADC_SAMPLETIME_181CYCLES_5;
+   sConfig.OffsetNumber = ADC_OFFSET_NONE;
+   sConfig.Offset = 0;
+   if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
+   {
+      Error_Handler();
+   }
+}
+
+static void DMA_LinkADC_Init(ADC_HandleTypeDef* hadc)
+{
+   if (hadc->Instance == ADC4)
+   {
+      __HAL_RCC_ADC34_CLK_ENABLE();
+      hdma_adc4.Instance = DMA2_Channel2;
+      hdma_adc4.Init.Direction = DMA_PERIPH_TO_MEMORY;
+      hdma_adc4.Init.PeriphInc = DMA_PINC_DISABLE;
+      hdma_adc4.Init.MemInc = DMA_MINC_ENABLE;
+      hdma_adc4.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+      hdma_adc4.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+      hdma_adc4.Init.Mode = DMA_CIRCULAR;
+      hdma_adc4.Init.Priority = DMA_PRIORITY_LOW;
+      if (HAL_DMA_Init(&hdma_adc4) != HAL_OK)
+      {
+         Error_Handler();
+      }
+
+      __HAL_LINKDMA(hadc, DMA_Handle, hdma_adc4);
+   }
 }
 
 static void DMA_Init(void)
 {
-  __HAL_RCC_DMA2_CLK_ENABLE();
+   __HAL_RCC_DMA2_CLK_ENABLE();
 
-  HAL_NVIC_SetPriority(DMA2_Channel2_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Channel2_IRQn);
+   HAL_NVIC_SetPriority(DMA2_Channel2_IRQn, 0, 0);
+   HAL_NVIC_EnableIRQ(DMA2_Channel2_IRQn);
 }
 
 /**
@@ -214,14 +227,16 @@ void ECU_HW_Init(void)
    HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
    HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 
+   __HAL_RCC_SYSCFG_CLK_ENABLE();
+   __HAL_RCC_PWR_CLK_ENABLE();
+
    __set_BASEPRI(0);
    __set_PRIMASK(0);
    __enable_irq();
 
    GPIO_Init();
-   DMA_Init();
-   OPAMP_Init();
    ADC_Init();
-
-   
+   DMA_Init();
+   DMA_LinkADC_Init(&hadc4);
+   OPAMP_Init();
 }

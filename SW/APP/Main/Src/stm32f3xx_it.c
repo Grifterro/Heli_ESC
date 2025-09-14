@@ -534,13 +534,10 @@ void DMA2_Channel1_IRQHandler(void)
       ;
    }
 }
-
+extern DMA_HandleTypeDef hdma_adc4;
 void DMA2_Channel2_IRQHandler(void)
 {
-   while (1)
-   {
-      ;
-   }
+   HAL_DMA_IRQHandler(&hdma_adc4);
 }
 
 void DMA2_Channel3_IRQHandler(void)
