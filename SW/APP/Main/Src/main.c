@@ -50,12 +50,24 @@ int main(void)
    ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__LED_STATUS_TURN_ON);
    HAL_ADC_Start_DMA(&hadc4, (uint32_t *)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH);
 
+   ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_1, 3);
+
    while (1)
    {
-      HAL_Delay(5000);
       vbat_mV_out = vbat_mV_out;
-      // VBUS_ProcessBlock((uint32_t *)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH / 2);
-      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_1, 25);
+      //  VBUS_ProcessBlock((uint32_t *)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH / 2);
+      HAL_Delay(2);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_1, 3);
+      HAL_Delay(2);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_2, 3);
+      HAL_Delay(2);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_3, 3);
+      HAL_Delay(2);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_4, 3);
+      HAL_Delay(2);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_5, 3);
+      HAL_Delay(2);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_6, 3);
    }
    return 0;
 }
