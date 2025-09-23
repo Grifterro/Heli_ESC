@@ -29,7 +29,15 @@
 
 /* Exported types ------------------------------------------------------------*/
 typedef GPIO_PinState ESC_HW_LLA__GPIO_PinState;
-
+typedef enum
+{
+   ESC_HW_LLA__BLDC_STEP_1 = 0,
+   ESC_HW_LLA__BLDC_STEP_2,
+   ESC_HW_LLA__BLDC_STEP_3,
+   ESC_HW_LLA__BLDC_STEP_4,
+   ESC_HW_LLA__BLDC_STEP_5,
+   ESC_HW_LLA__BLDC_STEP_6,
+} ESC_HW_LLA__BLDC_STEP_t;
 /* Exported constants --------------------------------------------------------*/
 
 /* Exported variables --------------------------------------------------------*/
@@ -39,4 +47,5 @@ typedef GPIO_PinState ESC_HW_LLA__GPIO_PinState;
  * @brief ESC_HW_LLA__SetEscLedSts()
  */
 void ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__GPIO_PinState PinState);
+void ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_t bldc_step, uint8_t percentage_power);
 #endif /* ESC_HW_LLA_H */

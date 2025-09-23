@@ -23,7 +23,7 @@
 /* Private define ------------------------------------------------------------*/
 
 /* Private variables ---------------------------------------------------------*/
-static TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim1;
 ADC_HandleTypeDef hadc4;
 DMA_HandleTypeDef hdma_adc4;
 OPAMP_HandleTypeDef hopamp4;
@@ -265,7 +265,7 @@ static void TIM1_Init(void)
    sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
    sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
-   sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+   sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_SET;
    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
    {
       Error_Handler();
@@ -299,12 +299,12 @@ static void TIM1_Init(void)
       Error_Handler();
    }
 
-   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
-   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+   HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
+   HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
+   HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
+   HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);
+   HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);
+   HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);
 
    /* CCR4 as triger for ADC in half CCR1/2/3 */
    /* Set comparison at half ARR (mid-term) */
@@ -331,6 +331,8 @@ static void TIM1_Init(void)
    {
       Error_Handler();
    }
+
+   __HAL_TIM_MOE_ENABLE(&htim1);
 }
 
 /**

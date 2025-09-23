@@ -52,9 +52,10 @@ int main(void)
 
    while (1)
    {
-      HAL_Delay(1000);
+      HAL_Delay(5000);
       vbat_mV_out = vbat_mV_out;
       // VBUS_ProcessBlock((uint32_t *)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH / 2);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_1, 25);
    }
    return 0;
 }
