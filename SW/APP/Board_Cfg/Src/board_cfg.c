@@ -313,7 +313,7 @@ static void TIM1_Init(void)
    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, (__HAL_TIM_GET_AUTORELOAD(&htim1) + 1U) / 2U);
 
    /* Channel 4 configuration in TIMING mode (no pin output, only CC event) */
-   sConfigOC.OCMode = TIM_OCMODE_TIMING;
+   sConfigOC.OCMode = TIM_OCMODE_TOGGLE;
    sConfigOC.Pulse = (__HAL_TIM_GET_AUTORELOAD(&htim1) + 1U) / 2U;
    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
    sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
