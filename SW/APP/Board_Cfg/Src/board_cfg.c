@@ -24,16 +24,14 @@
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim1;
+ADC_HandleTypeDef hadc3;
 ADC_HandleTypeDef hadc4;
+DMA_HandleTypeDef hdma_adc3;
 DMA_HandleTypeDef hdma_adc4;
-OPAMP_HandleTypeDef hopamp4;
-
-extern uint32_t vBusDMA_Buffer[ESC_VBUS_DMA_BUFFER_LENGTH];
 
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
 static void GPIO_Init(void);
-static void OPAMP_Init(void);
 static void ADC_Init(void);
 static void DMA_Init(void);
 static void DMA_LinkADC_Init(ADC_HandleTypeDef* hadc);
@@ -136,27 +134,10 @@ static void GPIO_Init(void)
    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
    /* ADC4 inputs: PB12 -> ADC4_IN3, PB14 -> ADC4_IN4, PB15 -> ADC4_IN5 */
-   GPIO_InitTypeDef GPIO_InitStruct = {0};
    GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_14 | GPIO_PIN_15;
    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
    GPIO_InitStruct.Pull = GPIO_NOPULL;
    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-}
-
-static void OPAMP_Init(void)
-{
-   hopamp4.Instance = OPAMP4;
-   hopamp4.Init.Mode = OPAMP_FOLLOWER_MODE;
-   hopamp4.Init.NonInvertingInput = OPAMP_NONINVERTINGINPUT_IO0;
-   hopamp4.Init.TimerControlledMuxmode = OPAMP_TIMERCONTROLLEDMUXMODE_DISABLE;
-   hopamp4.Init.UserTrimming = OPAMP_TRIMMING_FACTORY;
-   if (HAL_OPAMP_Init(&hopamp4) != HAL_OK)
-   {
-      Error_Handler();
-   }
-
-   HAL_OPAMP_SelfCalibrate(&hopamp4);
-   HAL_OPAMP_Start(&hopamp4);
 }
 
 /**
@@ -169,18 +150,50 @@ static void ADC_Init(void)
 
    __HAL_RCC_ADC34_CLK_ENABLE();
 
+   hadc3.Instance = ADC3;
+   hadc3.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
+   hadc3.Init.Resolution = ADC_RESOLUTION_12B;
+   hadc3.Init.ScanConvMode = ADC_SCAN_DISABLE;
+   hadc3.Init.ContinuousConvMode = DISABLE;
+   hadc3.Init.DiscontinuousConvMode = DISABLE;
+   hadc3.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
+   hadc3.Init.ExternalTrigConv = ADC_EXTERNALTRIGCONV_T1_TRGO2;
+   hadc3.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+   hadc3.Init.NbrOfConversion = 1;
+   hadc3.Init.DMAContinuousRequests = ENABLE;
+   hadc3.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+   hadc3.Init.LowPowerAutoWait = DISABLE;
+   hadc3.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+   if (HAL_ADC_Init(&hadc3) != HAL_OK)
+   {
+      Error_Handler();
+   }
+
+   HAL_ADCEx_Calibration_Start(&hadc3, ADC_SINGLE_ENDED);
+
+   sConfig.Channel = ADC_CHANNEL_5;
+   sConfig.Rank = ADC_REGULAR_RANK_1;
+   sConfig.SingleDiff = ADC_SINGLE_ENDED;
+   sConfig.SamplingTime = ADC_SAMPLETIME_181CYCLES_5;
+   sConfig.OffsetNumber = ADC_OFFSET_NONE;
+   sConfig.Offset = 0;
+   if (HAL_ADC_ConfigChannel(&hadc3, &sConfig) != HAL_OK)
+   {
+      Error_Handler();
+   }
+
    hadc4.Instance = ADC4;
    hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
    hadc4.Init.Resolution = ADC_RESOLUTION_12B;
-   hadc4.Init.ScanConvMode = ADC_SCAN_DISABLE;
+   hadc4.Init.ScanConvMode = ADC_SCAN_ENABLE;
    hadc4.Init.ContinuousConvMode = DISABLE;
    hadc4.Init.DiscontinuousConvMode = DISABLE;
    hadc4.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
    hadc4.Init.ExternalTrigConv = ADC_EXTERNALTRIGCONV_T1_TRGO2;
    hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-   hadc4.Init.NbrOfConversion = 1;
+   hadc4.Init.NbrOfConversion = 3;
    hadc4.Init.DMAContinuousRequests = ENABLE;
-   hadc4.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+   hadc4.Init.EOCSelection = ADC_EOC_SEQ_CONV;
    hadc4.Init.LowPowerAutoWait = DISABLE;
    hadc4.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
    if (HAL_ADC_Init(&hadc4) != HAL_OK)
@@ -193,7 +206,29 @@ static void ADC_Init(void)
    sConfig.Channel = ADC_CHANNEL_3;
    sConfig.Rank = ADC_REGULAR_RANK_1;
    sConfig.SingleDiff = ADC_SINGLE_ENDED;
-   sConfig.SamplingTime = ADC_SAMPLETIME_181CYCLES_5;
+   sConfig.SamplingTime = ADC_SAMPLETIME_19CYCLES_5;
+   sConfig.OffsetNumber = ADC_OFFSET_NONE;
+   sConfig.Offset = 0;
+   if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
+   {
+      Error_Handler();
+   }
+
+   sConfig.Channel = ADC_CHANNEL_4;
+   sConfig.Rank = ADC_REGULAR_RANK_2;
+   sConfig.SingleDiff = ADC_SINGLE_ENDED;
+   sConfig.SamplingTime = ADC_SAMPLETIME_19CYCLES_5;
+   sConfig.OffsetNumber = ADC_OFFSET_NONE;
+   sConfig.Offset = 0;
+   if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
+   {
+      Error_Handler();
+   }
+
+   sConfig.Channel = ADC_CHANNEL_5;
+   sConfig.Rank = ADC_REGULAR_RANK_3;
+   sConfig.SingleDiff = ADC_SINGLE_ENDED;
+   sConfig.SamplingTime = ADC_SAMPLETIME_19CYCLES_5;
    sConfig.OffsetNumber = ADC_OFFSET_NONE;
    sConfig.Offset = 0;
    if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
@@ -204,9 +239,26 @@ static void ADC_Init(void)
 
 static void DMA_LinkADC_Init(ADC_HandleTypeDef* hadc)
 {
-   if (hadc->Instance == ADC4)
+   __HAL_RCC_ADC34_CLK_ENABLE();
+   if (hadc->Instance == ADC3)
    {
-      __HAL_RCC_ADC34_CLK_ENABLE();
+      hdma_adc3.Instance = DMA2_Channel5;
+      hdma_adc3.Init.Direction = DMA_PERIPH_TO_MEMORY;
+      hdma_adc3.Init.PeriphInc = DMA_PINC_DISABLE;
+      hdma_adc3.Init.MemInc = DMA_MINC_ENABLE;
+      hdma_adc3.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+      hdma_adc3.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+      hdma_adc3.Init.Mode = DMA_CIRCULAR;
+      hdma_adc3.Init.Priority = DMA_PRIORITY_LOW;
+      if (HAL_DMA_Init(&hdma_adc3) != HAL_OK)
+      {
+         Error_Handler();
+      }
+
+      __HAL_LINKDMA(hadc, DMA_Handle, hdma_adc3);
+   }
+   else if (hadc->Instance == ADC4)
+   {
       hdma_adc4.Instance = DMA2_Channel2;
       hdma_adc4.Init.Direction = DMA_PERIPH_TO_MEMORY;
       hdma_adc4.Init.PeriphInc = DMA_PINC_DISABLE;
@@ -222,6 +274,10 @@ static void DMA_LinkADC_Init(ADC_HandleTypeDef* hadc)
 
       __HAL_LINKDMA(hadc, DMA_Handle, hdma_adc4);
    }
+   else
+   {
+      ;
+   }
 }
 
 static void DMA_Init(void)
@@ -230,6 +286,8 @@ static void DMA_Init(void)
 
    HAL_NVIC_SetPriority(DMA2_Channel2_IRQn, 0, 0);
    HAL_NVIC_EnableIRQ(DMA2_Channel2_IRQn);
+   HAL_NVIC_SetPriority(DMA2_Channel5_IRQn, 0, 0);
+   HAL_NVIC_EnableIRQ(DMA2_Channel5_IRQn);
 }
 
 static void TIM1_Init(void)
@@ -383,9 +441,9 @@ void ECU_HW_Init(void)
    __enable_irq();
 
    GPIO_Init();
-   OPAMP_Init();
    ADC_Init();
    DMA_Init();
+   DMA_LinkADC_Init(&hadc3);
    DMA_LinkADC_Init(&hadc4);
    TIM1_Init();
 }

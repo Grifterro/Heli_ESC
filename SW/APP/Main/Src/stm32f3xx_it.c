@@ -534,6 +534,7 @@ void DMA2_Channel1_IRQHandler(void)
       ;
    }
 }
+
 extern DMA_HandleTypeDef hdma_adc4;
 void DMA2_Channel2_IRQHandler(void)
 {
@@ -556,12 +557,10 @@ void DMA2_Channel4_IRQHandler(void)
    }
 }
 
+extern DMA_HandleTypeDef hdma_adc3;
 void DMA2_Channel5_IRQHandler(void)
 {
-   while (1)
-   {
-      ;
-   }
+   HAL_DMA_IRQHandler(&hdma_adc3);
 }
 
 void ADC4_IRQHandler(void)

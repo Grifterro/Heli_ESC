@@ -28,9 +28,11 @@ extern const uint32_t BTL_ADDRESS;
 #define BTL_BASE ((uint32_t)&BTL_ADDRESS)
 
 uint16_t vBusDMA_Buffer[ESC_VBUS_DMA_BUFFER_LENGTH] = {0};
+uint16_t Phase123DMA_Buffer[24] = {0};
 static volatile float vbat_mV_out = 0;
 
 extern ADC_HandleTypeDef hadc4;
+extern ADC_HandleTypeDef hadc3;
 
 /* Private function prototypes -----------------------------------------------*/
 
@@ -49,12 +51,14 @@ int main(void)
 
    ESC_HW_LLA__SetEscLedSts(ESC_HW_LLA__LED_STATUS_TURN_ON);
    HAL_ADC_Start_DMA(&hadc4, (uint32_t *)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH);
+   HAL_ADC_Start_DMA(&hadc3, (uint32_t *)Phase123DMA_Buffer, 3);
+   // ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_1, 3);
 
    while (1)
    {
       vbat_mV_out = vbat_mV_out;
       //  VBUS_ProcessBlock((uint32_t *)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH / 2);
-      HAL_Delay(1);
+      /*HAL_Delay(1);
       ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_1, 4);
       HAL_Delay(1);
       ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_2, 4);
@@ -65,7 +69,7 @@ int main(void)
       HAL_Delay(1);
       ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_5, 4);
       HAL_Delay(1);
-      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_6, 4);
+      ESC_HW_LLA__SetBldcStep(ESC_HW_LLA__BLDC_STEP_6, 4);*/
    }
    return 0;
 }
@@ -100,6 +104,10 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
    {
       VBUS_ProcessBlock(&vBusDMA_Buffer[0], ESC_VBUS_DMA_BUFFER_LENGTH);
       HAL_ADC_Start_DMA(&hadc4, (uint32_t *)vBusDMA_Buffer, ESC_VBUS_DMA_BUFFER_LENGTH);
+   }
+   if (hadc->Instance == ADC3)
+   {
+      HAL_ADC_Start_DMA(&hadc3, (uint32_t *)Phase123DMA_Buffer, 3);
    }
 }
 
