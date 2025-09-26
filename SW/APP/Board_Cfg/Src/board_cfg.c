@@ -134,6 +134,13 @@ static void GPIO_Init(void)
    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
    GPIO_InitStruct.Alternate = GPIO_AF6_TIM1;
    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+   /* ADC4 inputs: PB12 -> ADC4_IN3, PB14 -> ADC4_IN4, PB15 -> ADC4_IN5 */
+   GPIO_InitTypeDef GPIO_InitStruct = {0};
+   GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_14 | GPIO_PIN_15;
+   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+   GPIO_InitStruct.Pull = GPIO_NOPULL;
+   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 }
 
 static void OPAMP_Init(void)

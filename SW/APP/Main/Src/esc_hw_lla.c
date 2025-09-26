@@ -22,13 +22,24 @@
 /* Private typedef -----------------------------------------------------------*/
 
 /* Private define ------------------------------------------------------------*/
+#define VREFINT_CAL_ADDR ((uint16_t*)0x1FFFF7BAU)
+#define VREFINT_CAL_VREF_mV ((uint16_t)3300)
 
 /* Private variables ---------------------------------------------------------*/
 extern TIM_HandleTypeDef htim1;
 /* Private function prototypes -----------------------------------------------*/
 
 /* Private function ----------------------------------------------------------*/
+static uint32_t VDDA_FromVrefInt_mV(uint16_t vrefint_raw)
+{
+   uint32_t cal = (uint32_t)(*VREFINT_CAL_ADDR);
+   if (vrefint_raw == 0 || cal == 0)
+   {
+      return VREFINT_CAL_VREF_mV;
+   }
 
+   return (uint32_t)VREFINT_CAL_VREF_mV * cal / (uint32_t)vrefint_raw;
+}
 /**
  * @brief Error_Handler
  *
