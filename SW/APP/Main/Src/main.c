@@ -20,9 +20,6 @@
 
 /* Private define ------------------------------------------------------------*/
 #define BOOTLOADER_ADDRESS              ((uint32_t) 0x08000000U)
-#define BOOTLOADER_UPDATER_ADDRESS      ((uint32_t) 0x080E0000U)
-
-
 
 /* Private typedef -----------------------------------------------------------*/
 
@@ -41,6 +38,7 @@ void App_JumpTo_BootLoader(void);
 int main(void)
 { 
     HAL_Init();
+    SystemClock_Config();
     ECU_HW_Init();
 
     while (1)

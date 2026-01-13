@@ -24,6 +24,11 @@
 /* Exported macro ------------------------------------------------------------*/
 
 /* Exported definitions ------------------------------------------------------*/
+// GPIO
+#define LED_Status_GPIO_Pin       GPIO_PIN_2
+#define LED_Status_GPIO_Port      GPIOB
+#define VBUS_GPIO_Pin             GPIO_PIN_13
+#define VBUS_GPIO_Port            GPIOB
 
 /* Exported types ------------------------------------------------------------*/
 
@@ -39,5 +44,14 @@
 * @retval None
 */
 void ECU_HW_Init(void);
+
+
+/**
+* @brief SystemClock_Config
+*
+* @param  None
+* @retval None
+*/
+void SystemClock_Config(void);
 
 #endif /* BOARD_CFG_H */

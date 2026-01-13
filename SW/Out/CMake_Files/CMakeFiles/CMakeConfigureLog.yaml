@@ -1,0 +1,1784 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      The target system is: Generic -  - arm
+      The host system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeMinGWFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mingw32-make.exe"
+    candidate_directories:
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/REGISTRY-NOTFOUND/bin/"
+      - "c:/MinGW/bin/"
+      - "/MinGW/bin/"
+      - "/REGISTRY-NOTFOUND/MinGW/bin/"
+    searched_directories:
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/mingw32-make.exe.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/mingw32-make.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/mingw32-make.exe.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/mingw32-make.exe"
+      - "C:/Windows/System32/mingw32-make.exe.com"
+      - "C:/Windows/System32/mingw32-make.exe"
+      - "C:/Windows/mingw32-make.exe.com"
+      - "C:/Windows/mingw32-make.exe"
+      - "C:/Windows/System32/wbem/mingw32-make.exe.com"
+      - "C:/Windows/System32/wbem/mingw32-make.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mingw32-make.exe.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mingw32-make.exe"
+      - "C:/Windows/System32/OpenSSH/mingw32-make.exe.com"
+      - "C:/Windows/System32/OpenSSH/mingw32-make.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mingw32-make.exe.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mingw32-make.exe"
+      - "C:/msys64/ucrt64/bin/mingw32-make.exe.com"
+    found: "C:/msys64/ucrt64/bin/mingw32-make.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:67 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc"
+    candidate_directories:
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc"
+      - "C:/Windows/System32/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc"
+      - "C:/Windows/arm-none-eabi-gcc.com"
+      - "C:/Windows/arm-none-eabi-gcc.exe"
+      - "C:/Windows/arm-none-eabi-gcc"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe 
+      Build flags: -mcpu=cortex-m4;-mthumb;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-ffreestanding;-fdata-sections;-ffunction-sections
+      Id flags:  
+      
+      The output was:
+      1
+      c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\\libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x16): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe 
+      Build flags: -mcpu=cortex-m4;-mthumb;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-ffreestanding;-fdata-sections;-ffunction-sections
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/4.2.1/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ar"
+      - "ar"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ar.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ranlib"
+      - "ranlib"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ranlib.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-strip"
+      - "strip"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-strip.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-strip.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ld"
+      - "ld"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ld.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ld.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-readelf"
+      - "readelf"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-readelf.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-readelf.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-dlltool.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-dlltool"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-dlltool.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-dlltool.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-dlltool"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-dlltool.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-dlltool.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/arm-none-eabi-dlltool"
+      - "C:/Windows/arm-none-eabi-dlltool.com"
+      - "C:/Windows/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-dlltool.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-dlltool"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-dlltool.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-dlltool.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-dlltool"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-dlltool.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-dlltool"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-dlltool.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-dlltool.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-dlltool"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/dlltool.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/dlltool.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/dlltool"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/dlltool.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/dlltool.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/dlltool"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/dlltool.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/dlltool.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/dlltool"
+      - "C:/Windows/System32/dlltool.com"
+      - "C:/Windows/System32/dlltool.exe"
+      - "C:/Windows/System32/dlltool"
+      - "C:/Windows/dlltool.com"
+      - "C:/Windows/dlltool.exe"
+      - "C:/Windows/dlltool"
+      - "C:/Windows/System32/wbem/dlltool.com"
+      - "C:/Windows/System32/wbem/dlltool.exe"
+      - "C:/Windows/System32/wbem/dlltool"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool"
+      - "C:/Windows/System32/OpenSSH/dlltool.com"
+      - "C:/Windows/System32/OpenSSH/dlltool.exe"
+      - "C:/Windows/System32/OpenSSH/dlltool"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/dlltool.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/dlltool.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/dlltool"
+      - "C:/msys64/ucrt64/bin/dlltool.com"
+    found: "C:/msys64/ucrt64/bin/dlltool.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-addr2line.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-addr2line.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-tapi"
+      - "tapi"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-tapi.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-tapi.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-tapi"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-tapi.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-tapi.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-tapi"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-tapi.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-tapi.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-tapi"
+      - "C:/Windows/System32/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/arm-none-eabi-tapi"
+      - "C:/Windows/arm-none-eabi-tapi.com"
+      - "C:/Windows/arm-none-eabi-tapi.exe"
+      - "C:/Windows/arm-none-eabi-tapi"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-tapi.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-tapi.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-tapi"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-tapi.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-tapi.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-tapi"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-tapi.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-tapi.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-tapi"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-tapi.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-tapi.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-tapi"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/tapi.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/tapi.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/tapi"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/tapi.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/tapi.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/tapi"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/tapi.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/tapi.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/tapi"
+      - "C:/Windows/System32/tapi.com"
+      - "C:/Windows/System32/tapi.exe"
+      - "C:/Windows/System32/tapi"
+      - "C:/Windows/tapi.com"
+      - "C:/Windows/tapi.exe"
+      - "C:/Windows/tapi"
+      - "C:/Windows/System32/wbem/tapi.com"
+      - "C:/Windows/System32/wbem/tapi.exe"
+      - "C:/Windows/System32/wbem/tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi"
+      - "C:/Windows/System32/OpenSSH/tapi.com"
+      - "C:/Windows/System32/OpenSSH/tapi.exe"
+      - "C:/Windows/System32/OpenSSH/tapi"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/tapi.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/tapi.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/tapi"
+      - "C:/msys64/ucrt64/bin/tapi.com"
+      - "C:/msys64/ucrt64/bin/tapi.exe"
+      - "C:/msys64/ucrt64/bin/tapi"
+      - "C:/Program Files/CMake/bin/tapi.com"
+      - "C:/Program Files/CMake/bin/tapi.exe"
+      - "C:/Program Files/CMake/bin/tapi"
+      - "C:/Program Files/Git/cmd/tapi.com"
+      - "C:/Program Files/Git/cmd/tapi.exe"
+      - "C:/Program Files/Git/cmd/tapi"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/tapi.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/tapi.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/tapi"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-10.3"
+      - "arm-none-eabi-gcc-ar-10"
+      - "arm-none-eabi-gcc-ar10"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Windows/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-10.3"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-10.3.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-10.3.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-10.3"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-10"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-10"
+      - "C:/Windows/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-10"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-10"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-10"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-10"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-10"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-10.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-10"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-10"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-10"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-10"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-10.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-10.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-10"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar10.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar10"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar10.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar10"
+      - "C:/Windows/arm-none-eabi-gcc-ar10.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar10"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar10.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar10"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar10.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar10"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar10.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar10"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar10.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar10"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar10.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar10.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar10"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar10.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar10"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar10.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar10"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar10.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar10"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar10.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar10.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar10"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-10.3"
+      - "arm-none-eabi-gcc-ranlib-10"
+      - "arm-none-eabi-gcc-ranlib10"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-10.3.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-10.3.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-10.3"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-10"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-10.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-10.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-10"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib10"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib10"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib10"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib10"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib10"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib10"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib10"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib10"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib10"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib10"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib10"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib10"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib10.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib10.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib10"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:64 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc"
+    candidate_directories:
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc"
+      - "C:/Windows/System32/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc"
+      - "C:/Windows/arm-none-eabi-gcc.com"
+      - "C:/Windows/arm-none-eabi-gcc.exe"
+      - "C:/Windows/arm-none-eabi-gcc"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc.exe (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ar-"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:11 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/msys64/ucrt64/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.1.0/resources/binaries/win32/x86_64/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/arm-none-eabi-gcc-ranlib-"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/msys64/ucrt64/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/CMake/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Program Files/Git/cmd/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/fabia/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\fabia\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64"
+        - "c:/Users/fabia/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\msys64\\ucrt64\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
+        - "C:\\Users\\fabia\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\fabia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:11 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg"
+      binary: "C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffreestanding -fdata-sections -ffunction-sections"
+      CMAKE_C_FLAGS_DEBUG: "-g -O0 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffreestanding -fdata-sections -ffunction-sections"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -Wl,--gc-sections"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_19182/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_19182.dir\\build.make CMakeFiles/cmTC_19182.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg'
+        Building C object CMakeFiles/cmTC_19182.dir/CMakeCCompilerABI.c.obj
+        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE   -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffreestanding -fdata-sections -ffunction-sections    -v -o CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE
+        Target: arm-none-eabi
+        Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --build=x86_64-linux-gnu --host=i686-w64-mingw32 --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-mingw-wildcard --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-headers=yes --with-newlib --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/arm-none-eabi --with-libiconv-prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-ffreestanding' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
+         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mlibarch=armv7e-m+fp -march=armv7e-m+fp -auxbase-strip CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj -version -ffreestanding -fdata-sections -ffunction-sections -o C:\\Users\\fabia\\AppData\\Local\\Temp\\ccrEJjnz.s
+        GNU C17 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
+        	compiled by GNU C version 7.3-win32 20180312, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "c:/progra~2/gnuarm~1/102021~1.10/lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"
+        ignoring nonexistent directory "c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/lib/gcc/arm-none-eabi/10.3.1/../../../../include"
+        ignoring duplicate directory "c:/progra~2/gnuarm~1/102021~1.10/lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"
+        ignoring duplicate directory "c:/progra~2/gnuarm~1/102021~1.10/lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/include
+         c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/include-fixed
+         c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        GNU C17 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
+        	compiled by GNU C version 7.3-win32 20180312, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: f3937ce18b4177bfd408ca565336596a
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-ffreestanding' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
+         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj C:\\Users\\fabia\\AppData\\Local\\Temp\\ccrEJjnz.s
+        GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
+        COMPILER_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/;c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-ffreestanding' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp'
+        Linking C static library libcmTC_19182.a
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_19182.dir\\cmake_clean_target.cmake
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_19182.dir\\link.txt --verbose=1
+        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_19182.a CMakeFiles/cmTC_19182.dir/CMakeCCompilerABI.c.obj
+        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_19182.a
+        mingw32-make[1]: Leaving directory 'C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
+          add: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+          add: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include] ==> [C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include]
+        collapse include dir [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed] ==> [C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        collapse include dir [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include] ==> [C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/arm-none-eabi/include]
+        implicit include dirs: [C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include;C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:11 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_19182/fast]
+        ignore line: [C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_19182.dir\\build.make CMakeFiles/cmTC_19182.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg']
+        ignore line: [Building C object CMakeFiles/cmTC_19182.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE   -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffreestanding -fdata-sections -ffunction-sections    -v -o CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --build=x86_64-linux-gnu --host=i686-w64-mingw32 --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-mingw-wildcard --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-headers=yes --with-newlib --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/arm-none-eabi --with-libiconv-prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-mingw/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-ffreestanding' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
+        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mlibarch=armv7e-m+fp -march=armv7e-m+fp -auxbase-strip CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj -version -ffreestanding -fdata-sections -ffunction-sections -o C:\\Users\\fabia\\AppData\\Local\\Temp\\ccrEJjnz.s]
+        ignore line: [GNU C17 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "c:/progra~2/gnuarm~1/102021~1.10/lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"]
+        ignore line: [ignoring nonexistent directory "c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-mingw/lib/gcc/arm-none-eabi/10.3.1/../../../../include"]
+        ignore line: [ignoring duplicate directory "c:/progra~2/gnuarm~1/102021~1.10/lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "c:/progra~2/gnuarm~1/102021~1.10/lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/include]
+        ignore line: [ c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        ignore line: [ c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: f3937ce18b4177bfd408ca565336596a]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-ffreestanding' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
+        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj C:\\Users\\fabia\\AppData\\Local\\Temp\\ccrEJjnz.s]
+        ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
+        ignore line: [COMPILER_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m4' '-mthumb' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-ffreestanding' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles\\cmTC_19182.dir\\CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp']
+        ignore line: [Linking C static library libcmTC_19182.a]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_19182.dir\\cmake_clean_target.cmake]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_19182.dir\\link.txt --verbose=1]
+        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_19182.a CMakeFiles/cmTC_19182.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_19182.a]
+        ignore line: [mingw32-make[1]: Leaving directory 'C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/CMakeScratch/TryCompile-e9fajg']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

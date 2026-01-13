@@ -34,11 +34,11 @@
   * @param  None
   * @retval None
 */
-void NMI_Handler_APP(void);
-void HardFault_Handler_APP(void);
-void MemManage_Handler_APP(void);
-void BusFault_Handler_APP(void);
-void UsageFault_Handler_APP(void);
-void DebugMon_Handler_APP(void);
+void NMI_Handler(void);
+void HardFault_Handler(void);
+void MemManage_Handler(void);
+void BusFault_Handler(void);
+void UsageFault_Handler(void);
+void DebugMon_Handler(void);
 
 #endif /* __STM32F3xx_IT_H */

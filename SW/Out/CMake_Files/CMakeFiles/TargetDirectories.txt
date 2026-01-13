@@ -1,0 +1,16 @@
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/create_output_dirs.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/APP.elf.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/BootLoader.elf.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/edit_cache.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/CMakeFiles/rebuild_cache.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/APP/CMakeFiles/APP_objs.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/APP/CMakeFiles/HAL_APP.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/APP/CMakeFiles/edit_cache.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/APP/CMakeFiles/rebuild_cache.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/BootLoader/CMakeFiles/BOOTLOADER_objs.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/BootLoader/CMakeFiles/HAL_BOOTLOADER.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/BootLoader/CMakeFiles/edit_cache.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/BootLoader/CMakeFiles/rebuild_cache.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/MCU_Core/CMakeFiles/MCU_CORE_RUNTIME.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/MCU_Core/CMakeFiles/edit_cache.dir
+C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/MCU_Core/CMakeFiles/rebuild_cache.dir

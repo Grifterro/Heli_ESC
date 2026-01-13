@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/cmake_install.cmake",
+		"C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/APP/cmake_install.cmake",
+		"C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/BootLoader/cmake_install.cmake",
+		"C:/Users/fabia/Desktop/HeliESC/SW/Out/CMake_Files/MCU_Core/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
